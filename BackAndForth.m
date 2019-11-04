@@ -1,4 +1,4 @@
-count = 1; //test2
+count = 1;
 while count <= 10
     while brick.TouchPressed(1) == 0
     end
