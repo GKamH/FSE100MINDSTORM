@@ -6,9 +6,11 @@ tries = 1;
 stillGoing = 1;
 while stillGoing == 1
     turnRightAmt(brick, 90);
+    delta = brick.UltrasonicDist(4);
     while Wall(delta)
        pause(0.1);
        turnLeftAmt(brick, 90); 
+       delta = brick.UltrasonicDist(4);
     end
     kappa = brick.ColorCode(1);
     if kappa == 5 %red stop sign
