@@ -1,0 +1,5 @@
+function ReadColor(brick)
+brick.SetColorMode(1, 2);
+kappa = brick.ColorCode(1);
+display(kappa);
+end
