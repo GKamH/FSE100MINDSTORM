@@ -1,8 +1,7 @@
-clearvars;
-sonic = sonicSensor(brick, 4);
-delta = readDistancef(sonic);
-color = colorSensor(brick, 1);
-kappa = readColor(color);
+%clearvars;
+delta = brick.UltrasonicDist(4);
+brick.SetColorMode(1, 2);
+kappa = brick.ColorCode(1);
 tries = 1;
 while kappa == white || kappa == red   
     if kappa == red
