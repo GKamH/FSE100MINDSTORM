@@ -3,9 +3,10 @@ delta = brick.UltrasonicDist(4);
 brick.SetColorMode(1, 2);
 kappa = brick.ColorCode(1);
 tries = 1;
-while kappa == white || kappa == red   
-    if kappa == red
+while kappa == 6 || kappa == 5 
+    if kappa == 5
         brick.MoveMotorAngleRel('BC', 40, 0);
+        pause(3);
     end
     if Wall(delta)
        pause(0.1);
@@ -23,8 +24,8 @@ while kappa == white || kappa == red
         tries = 0;
     end
 end
-if kappa == green
+if kappa == 3
     brick.MoveMotorAngleRel('D',  40, 180);
-elseif kappa == yellow
+elseif kappa == 4
     brick.MoveMotorAngleRel('D',  40, -180);
-end
+endf
