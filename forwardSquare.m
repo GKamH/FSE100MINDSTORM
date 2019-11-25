@@ -1,5 +1,6 @@
 function forwardSquare(brick)
-brick.ResetMotorAngle('BC');
-brick.MoveMotorAngleRel('C', -50)
-brick.MoveMotorAngleRel('B', 1080);
-brick.WaitForMotor('B');
+brick.MoveMotorAngleRel('C', 40, -60);
+brick.MoveMotor('B', -80);
+pause(5);
+brick.StopMotor('B'); 
+
